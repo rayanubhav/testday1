@@ -10,10 +10,23 @@
     <button onclick="print()">Click me</button>
     <h2 id="result"></h2>
 
+    <input type="text" autofocus id="num" placeholder="Enter number">
+    <button onclick="getTable()">Click me</button>
+    <p id="temp">Wait...</p>
+
     <script>
         function print(){
             var n = Number(document.getElementById("radius").value);
             document.getElementById("result").innerHTML = `Area=${Math.PI * n * n} and Circumference=${2 * Math.PI * n}`;
+        }
+
+         function getTable(){
+            num=document.getElementById('num').value;
+            output=''
+            for(i=1;i<=10;i++){
+                output=output+`${num} * ${i} = ${num*i}<br>`
+            }
+            document.getElementById("temp").innerHTML=output
         }
     </script>
     
