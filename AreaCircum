@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="radius" placeholder="Enter a number">
+    <button onclick="print()">Click me</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function print(){
+            var n = Number(document.getElementById("radius").value);
+            document.getElementById("result").innerHTML = `Area=${Math.PI * n * n} and Circumference=${2 * Math.PI * n}`;
+        }
+    </script>
+    
+</body>
+</html>
